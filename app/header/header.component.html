@@ -10,7 +10,7 @@
           <div class="col-md-8">
               <form  >
                   <input id="SearchInput"  type="search" placeholder="Search for Products Brands and More"  >
-                  <button id="searchButton" class="btn " type="submit">
+                  <button id="searchButton" class="btn" (click)="callParent($event)"  type="submit">
                      Search
                     <!-- <i class="fas fa-search"></i> -->
                   </button>

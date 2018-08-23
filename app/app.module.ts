@@ -14,9 +14,19 @@ import { MainItemMobileComponent } from './filter/fiter-r/main-item-mobile/main-
 import { Item1MComponent } from './filter/fiter-r/main-item-mobile/item1-m/item1-m.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
 import { CustomPipePipe } from './custom-pipe.pipe';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CustomProductDataAjaxService } from './custom-product-data-ajax.service';
+import { CustomGuardGuard } from './custom-guard.guard';
 // import { FilterLRamComponent } from './Filter/fiter-l/filter-l-ram/filter-l-ram.component';
 // import { FilterLeftComponent } from './Filter/filter-left/filter-left.component';
 // import { FilterRightComponent } from './Filter/filter-right/filter-right.component';
+// import { Observable } from 'rxjs';
+// import 'rxjs/add/observable/of';
+// import 'rxjs/add/operator/toPromise';
+
+
 
 @NgModule({
   declarations: [
@@ -37,9 +47,9 @@ import { CustomPipePipe } from './custom-pipe.pipe';
     // FilterRightComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule,HttpModule
   ],
-  providers: [],
+  providers: [CustomProductDataAjaxService,CustomGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
